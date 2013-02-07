@@ -1,0 +1,17 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Package Control",
+		"Theme - Soda",
+		"CoffeeScript",
+		"Cucumber",
+		"Git",
+		"LESS",
+		"Sass",
+		"Haml",
+		"ruby-slim.tmbundle",
+		"QuickFileMove",
+		"ToggleQuotes"
+	]
+}
