@@ -13,14 +13,21 @@ else
 fi
 
 # Add `subl` terminal command
-if [ $(which subl > /dev/null) ]
+command -v subl > /dev/null
+if [ $? -eq 0 ]
 then
-  echo '`subl` terminal command already installed'
+  echo "Terminal command 'subl' already installed"
 else
   if [ -d "$HOME/.bin" ]
   then
+    echo "Adding terminal command 'subl' into ~/.bin"
     ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$HOME/.bin/subl"
+  elif [ -d "$HOME/bin" ]
+  then
+    echo "Adding terminal command 'subl' into ~/bin"
+    ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$HOME/bin/subl"
   else
+    echo "Adding terminal command 'subl' into /usr/local/bin"
     ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
   fi
 fi
@@ -45,12 +52,7 @@ else
 fi
 
 echo 'Add default packages and configs...'
-
-# consider replacing by `cp settings/* $SUBLIME_DIR/Packages/User/'
-cp -f "settings/Preferences.sublime-settings" \
-      "settings/Package Control.sublime-settings" \
-      "settings/Default (OSX).sublime-keymap" \
-      "$SUBLIME_DIR/Packages/User/"
+cp -f "settings/*" "$SUBLIME_DIR/Packages/User/"
 
 echo | subl --wait <<TXT
 # Almost done
@@ -67,7 +69,8 @@ When it's done (you should see 'Package Control: No updated packages' line)
 please close Sublime Text 2 (cmd-q). ST2 will restart automatically.
 
 --
-nicck
+https://github.com/fs/sublime-bootstrap
 TXT
 
 subl ./
+echo 'Done.'
