@@ -40,7 +40,7 @@ then
   echo 'Config directory found.'
 else
   echo 'Creating config directory'
-  subl --background && sleep '0.5' && osascript -e 'tell application "Sublime Text 2" to quit'
+  open -g "$APP_DIR" && sleep '0.5' && osascript -e 'tell application "Sublime Text 2" to quit'
 fi
 
 if [ -f "$SUBLIME_DIR/Installed Packages/Package Control.sublime-package" ]
@@ -80,5 +80,5 @@ please close Sublime Text 2 (cmd-q). ST2 will restart automatically.
 https://github.com/fs/sublime-bootstrap
 TXT
 
-subl
+open "$APP_DIR"
 echo 'Done.'
