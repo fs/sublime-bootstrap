@@ -12,6 +12,7 @@ Config includes:
 ## Setup
 
 1. Get and Install [Sublime Text 2](http://www.sublimetext.com/2)
-2. `git clone https://github.com/fs/sublime-bootstrap.git`
-3. `cd sublime-bootstrap`
-4. `sh bootstrap-osx.sh`
+
+2. Paste that at a Terminal prompt:
+
+`curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh | sh`

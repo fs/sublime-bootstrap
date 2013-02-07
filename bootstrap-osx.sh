@@ -48,13 +48,21 @@ then
   echo 'Package Control already installed.'
 else
   echo 'Downloading Package Control'
-  curl --silent --show-error 'http://sublime.wbond.net/Package%20Control.sublime-package' --output "$SUBLIME_DIR/Installed Packages/Package Control.sublime-package"
+  curl --silent --show-error --fail --location \
+    'http://sublime.wbond.net/Package%20Control.sublime-package' \
+    --output "$SUBLIME_DIR/Installed Packages/Package Control.sublime-package"
 fi
 
 echo 'Add default packages and configs...'
-cp -f "settings/*" "$SUBLIME_DIR/Packages/User/"
 
-echo | subl --wait <<TXT
+curl --silent --show-error --fail --location \
+  'https://github.com/fs/sublime-bootstrap/tarball/master' | \
+  tar --strip 1 -zxvf - fs-sublime-bootstrap*/settings > /dev/null
+
+cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
+rm -rf ./settings
+
+echo | subl --stay --wait - <<TXT
 # Almost done
 
 Now Sublime Text 2 installing packages and "Soda Theme"
@@ -72,5 +80,5 @@ please close Sublime Text 2 (cmd-q). ST2 will restart automatically.
 https://github.com/fs/sublime-bootstrap
 TXT
 
-subl ./
+subl
 echo 'Done.'
