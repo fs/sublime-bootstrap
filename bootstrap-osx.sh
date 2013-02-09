@@ -20,16 +20,15 @@ then
 else
   if [ -d "$HOME/.bin" ]
   then
-    echo "Adding terminal command 'subl' into ~/.bin"
-    ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$HOME/.bin/subl"
+    APP_CMD="$HOME/.bin/subl"
   elif [ -d "$HOME/bin" ]
   then
-    echo "Adding terminal command 'subl' into ~/bin"
-    ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$HOME/bin/subl"
+    APP_CMD="$HOME/bin/subl"
   else
-    echo "Adding terminal command 'subl' into /usr/local/bin"
-    ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+    APP_CMD="/usr/local/bin/subl"
   fi
+  echo "Adding terminal command 'subl' into $APP_CMD"
+  ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$APP_CMD"
 fi
 
 # Install package control
@@ -62,7 +61,7 @@ curl --silent --show-error --fail --location \
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
 rm -rf ./settings
 
-echo | subl --stay --wait - <<TXT
+echo | $APP_CMD --stay --wait - <<TXT
 # Almost done
 
 Now Sublime Text 2 installing packages and "Soda Theme"
