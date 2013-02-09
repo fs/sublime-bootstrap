@@ -13,6 +13,4 @@ Config includes:
 
 1. Get and Install [Sublime Text 2](http://www.sublimetext.com/2)
 
-2. Paste that at a Terminal prompt:
-
-`curl -fsSL http://git.io/sublime-bootstrap | sh`
+2. Paste that at a Terminal prompt: `curl -fsSL http://git.io/sublime-bootstrap | sh`
