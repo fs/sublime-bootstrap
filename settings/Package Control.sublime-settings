@@ -6,12 +6,9 @@
 		"Theme - Soda",
 		"CoffeeScript",
 		"Cucumber",
-		"Git",
 		"LESS",
 		"Sass",
 		"Haml",
-		"ruby-slim.tmbundle",
-		"QuickFileMove",
-		"ToggleQuotes"
+		"ruby-slim.tmbundle"
 	]
 }

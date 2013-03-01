@@ -1,14 +1,15 @@
 #!/bin/sh
 
-APP_DIR="/Applications/Sublime Text 2.app"
-SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 2"
+APP_NAME="Sublime Text"
+APP_DIR="/Applications/User/$APP_NAME.app"
+SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 3"
 
 if [ -d "$APP_DIR" ]
 then
-  echo 'Sublime Text 2 application found.'
+  echo 'Sublime Text 3 application found.'
 else
-  echo 'Sublime Text 2 not installed. Please install it to /Applications folder first.'
-  open 'http://www.sublimetext.com/2'
+  echo 'Sublime Text 3 not installed. Please install it to /Applications folder first.'
+  open 'http://www.sublimetext.com/3'
   exit 1
 fi
 
@@ -37,30 +38,33 @@ if [[ :$PATH: != *:"$CMD_PATH":* ]] ; then
 fi
 
 # Install package control
-# http://wbond.net/sublime_packages/package_control/installation
+# http://wbond.net/sublime_packages/package_control/installation#ST3
 
 if [ -d "$SUBLIME_DIR" ]
 then
   echo 'Config directory found.'
 else
   echo 'Creating config directory'
-  open -g "$APP_DIR" && sleep '0.5' && osascript -e 'tell application "Sublime Text 2" to quit'
+  open -g "$APP_DIR" && \
+  sleep '0.5' && \
+  osascript -e "tell application \"$APP_NAME\" to quit"
 fi
 
-if [ -f "$SUBLIME_DIR/Installed Packages/Package Control.sublime-package" ]
+if [ -d "$SUBLIME_DIR/Packages/Package Control" ]
 then
   echo 'Package Control already installed.'
 else
-  echo 'Downloading Package Control'
-  curl --silent --show-error --fail --location \
-    'http://sublime.wbond.net/Package%20Control.sublime-package' \
-    --output "$SUBLIME_DIR/Installed Packages/Package Control.sublime-package"
+  echo 'Installing Package Control'
+
+  git clone --branch python3 --depth 1 \
+    https://github.com/wbond/sublime_package_control.git \
+    "$SUBLIME_DIR/Packages/Package Control"
 fi
 
 echo 'Add default packages and configs...'
 
 curl --silent --show-error --fail --location \
-  'https://github.com/fs/sublime-bootstrap/tarball/master' | \
+  'https://github.com/nicck/sublime-bootstrap/tarball/st3' | \
   tar --strip 1 -zxvf - fs-sublime-bootstrap*/settings > /dev/null
 
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
@@ -69,19 +73,16 @@ rm -rf ./settings
 echo | $CMD_PATH/subl --stay --wait - <<TXT
 # Almost done
 
-Now Sublime Text 2 installing packages and "Soda Theme"
-(that's why Sublime Text 2 looks bad right now).
+Now Sublime Text 3 installing packages and "Soda Theme"
+(that's why Sublime Text 3 looks bad right now).
 
 Packages downloading can take some time (minute or so)
 please be patient.
 
 You can press Ctrl-\` and monitor installing process.
 
-When it's done (you should see 'Package Control: No updated packages' line)
-please close Sublime Text 2 (cmd-q). ST2 will restart automatically.
-
 --
-https://github.com/fs/sublime-bootstrap
+https://github.com/nicck/sublime-bootstrap/tree/st3
 TXT
 
 open "$APP_DIR"
