@@ -1,7 +1,7 @@
 #!/bin/sh
 
 APP_NAME="Sublime Text"
-APP_DIR="/Applications/User/$APP_NAME.app"
+APP_DIR="/Applications/$APP_NAME.app"
 SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 3"
 
 if [ -d "$APP_DIR" ]
