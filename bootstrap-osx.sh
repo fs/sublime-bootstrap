@@ -70,20 +70,6 @@ curl --silent --show-error --fail --location \
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
 rm -rf ./settings
 
-echo | $CMD_PATH/subl --stay --wait - <<TXT
-# Almost done
-
-Now Sublime Text 3 installing packages and "Soda Theme"
-(that's why Sublime Text 3 looks bad right now).
-
-Packages downloading can take some time (minute or so)
-please be patient.
-
-You can press Ctrl-\` and monitor installing process.
-
---
-https://github.com/nicck/sublime-bootstrap/tree/st3
-TXT
+echo "Done"
 
 open "$APP_DIR"
-echo 'Done.'
