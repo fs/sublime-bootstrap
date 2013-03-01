@@ -56,7 +56,7 @@ then
 else
   echo 'Installing Package Control'
 
-  git clone --branch python3 --depth 1 \
+  git clone --quiet --branch python3 --depth 1 \
     https://github.com/wbond/sublime_package_control.git \
     "$SUBLIME_DIR/Packages/Package Control"
 fi
@@ -65,7 +65,7 @@ echo 'Add default packages and configs...'
 
 curl --silent --show-error --fail --location \
   'https://github.com/nicck/sublime-bootstrap/tarball/st3' | \
-  tar --strip 1 -zxvf - fs-sublime-bootstrap*/settings > /dev/null
+  tar --strip 1 -zxvf - *-sublime-bootstrap-*/settings > /dev/null
 
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
 rm -rf ./settings
