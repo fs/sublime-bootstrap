@@ -19,15 +19,10 @@ if [ $? -eq 0 ]
 then
   echo "Terminal command 'subl' already installed"
 else
-  if [ -d "$HOME/.bin" ]
-  then
-    CMD_PATH="$HOME/.bin"
-  elif [ -d "$HOME/bin" ]
-  then
-    CMD_PATH="$HOME/bin"
-  else
-    CMD_PATH="/usr/local/bin"
-  fi
+  CMD_PATH="/usr/local/bin"
+
+  sudo chown -R `whoami` /usr/local
+  mkdir /usr/local/bin 2> /dev/null
 
   echo "Adding terminal command 'subl' into $CMD_PATH"
   ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$CMD_PATH/subl"
