@@ -9,6 +9,7 @@
 		"LESS",
 		"Sass",
 		"Haml",
-		"ruby-slim.tmbundle"
+		"ruby-slim.tmbundle",
+		"GitGutter"
 	]
 }
