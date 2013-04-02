@@ -3,6 +3,7 @@
 APP_NAME="Sublime Text"
 APP_DIR="/Applications/$APP_NAME.app"
 SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 3"
+LICENSE_FILE="$HOME/Library/Application Support/Sublime Text 2/Local/License.sublime_license"
 
 if [ -d "$APP_DIR" ]
 then
@@ -64,6 +65,12 @@ curl --silent --show-error --fail --location \
 
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
 rm -rf ./settings
+
+if [ -a "$LICENSE_FILE"]
+then
+  echo 'Sublime Text 2 license file found.'
+  cp "$LICENSE_FILE" "$SUBLIME_DIR/Local/License.sublime_license"
+fi
 
 echo "Done"
 
