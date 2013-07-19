@@ -60,7 +60,7 @@ fi
 echo 'Add default packages and configs...'
 
 curl --silent --show-error --fail --location \
-  'https://github.com/nicck/sublime-bootstrap/tarball/st3' | \
+  'https://github.com/nicck/sublime-bootstrap/tarball/master' | \
   tar --strip 1 -zxvf - *-sublime-bootstrap-*/settings > /dev/null
 
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"

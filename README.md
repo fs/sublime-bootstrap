@@ -14,5 +14,5 @@ Config includes:
 2. Paste that at a Terminal prompt:
 
 ```sh
-curl -fsSL https://raw.github.com/nicck/sublime-bootstrap/st3/bootstrap-osx.sh | sh
+curl -fsSL https://raw.github.com/nicck/sublime-bootstrap/master/bootstrap-osx.sh | sh
 ```
