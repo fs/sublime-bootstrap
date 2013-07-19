@@ -3,6 +3,7 @@
 	"drag_text": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
+	"enable_tab_scrolling": false,
 	"font_face": "Menlo",
 	"font_size": 15.0,
 	"line_padding_top": 1,
