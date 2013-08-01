@@ -10,6 +10,7 @@ then
   echo 'Sublime Text 3 application found.'
 else
   echo 'Sublime Text 3 not installed. Please install it to /Applications folder first.'
+  echo 'Then run in terminal: curl -fsSL http://git.io/sublime3-bootstrap | sh'
   open 'http://www.sublimetext.com/3'
   exit 1
 fi
@@ -66,7 +67,7 @@ curl --silent --show-error --fail --location \
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
 rm -rf ./settings
 
-if [ -a "$LICENSE_FILE"]
+if [ -a "$LICENSE_FILE" ]
 then
   echo 'Sublime Text 2 license file found.'
   cp "$LICENSE_FILE" "$SUBLIME_DIR/Local/License.sublime_license"
