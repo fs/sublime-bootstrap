@@ -53,9 +53,9 @@ then
 else
   echo 'Installing Package Control'
 
-  git clone --quiet --branch python3 --depth 1 \
-    https://github.com/wbond/sublime_package_control.git \
-    "$SUBLIME_DIR/Packages/Package Control"
+  curl --silent --show-error --fail --location \
+    'http://sublime.wbond.net/Package%20Control.sublime-package' \
+    --output "$SUBLIME_DIR/Installed Packages/Package Control.sublime-package"
 fi
 
 echo 'Add default packages and configs...'
