@@ -2,14 +2,15 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"Package Control",
-		"Theme - Soda",
 		"CoffeeScript",
 		"Cucumber",
-		"LESS",
-		"Sass",
+		"Git",
+		"GitGutter",
 		"Haml",
-		"ruby-slim.tmbundle",
-		"GitGutter"
+		"LESS",
+		"Package Control",
+		"Ruby Slim",
+		"Sass",
+		"Theme - Soda"
 	]
 }
