@@ -27,7 +27,7 @@ else
   mkdir /usr/local/bin 2> /dev/null
 
   echo "Adding terminal command 'subl' into $CMD_PATH"
-  ln -s "$APP_DIR/Contents/SharedSupport/bin/subl" "$CMD_PATH/subl"
+  ln -sf "$APP_DIR/Contents/SharedSupport/bin/subl" "$CMD_PATH/subl"
 fi
 
 if [[ :$PATH: != *:"$CMD_PATH":* ]] ; then
