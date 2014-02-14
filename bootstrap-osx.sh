@@ -1,13 +1,17 @@
 #!/bin/sh
 
 APP_NAME="Sublime Text"
-APP_DIR="/Applications/$APP_NAME.app"
 SUBLIME_DIR="$HOME/Library/Application Support/Sublime Text 3"
 LICENSE_FILE="$HOME/Library/Application Support/Sublime Text 2/Local/License.sublime_license"
 
-if [ -d "$APP_DIR" ]
+if [ -d "/Applications/$APP_NAME.app" ]
 then
-  echo 'Sublime Text 3 application found.'
+  APP_DIR="/Applications/$APP_NAME.app"
+  echo 'Sublime Text 3 application found globally'
+elif [ -d "$HOME/Applications/$APP_NAME.app" ]
+then
+  APP_DIR="$HOME/Applications/$APP_NAME.app"
+  echo 'Sublime Text 3 application found locally'
 else
   echo 'Sublime Text 3 not installed. Please install it to /Applications folder first.'
   echo 'Then run in terminal: curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh | sh'
@@ -73,6 +77,6 @@ then
   cp "$LICENSE_FILE" "$SUBLIME_DIR/Local/License.sublime_license"
 fi
 
-echo "Done"
+echo "Done. Please wait few minutes while Sublime Text 3 installing packages."
 
 open "$APP_DIR"
