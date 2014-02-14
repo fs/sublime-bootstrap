@@ -1,11 +1,13 @@
 # sublime-bootstrap
 
-Simple way to configure fresh instalation of Sublime Text 3
+Simple way to configure fresh installation of Sublime Text 3
 
 Config includes:
 
 - [Soda Theme](http://buymeasoda.github.com/soda-theme/)
-- Packages for work with CoffeeScript, SASS, LESS, Slim and HAML
+- Packages for work with GIT, CoffeeScript, SASS, LESS, Slim and HAML
+- ChangeQuotes package for quick changing quotes with `alt+shift+'` hotkey
+- `alt+up` and `alt+down` for jumping between empty lines (paragraphs)
 
 ## Setup
 
@@ -14,5 +16,5 @@ Config includes:
 2. Paste that at a Terminal prompt:
 
 ```sh
-curl -fsSL http://git.io/sublime3-bootstrap | sh
+curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh | sh
 ```
