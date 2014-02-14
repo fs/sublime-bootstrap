@@ -10,7 +10,7 @@ then
   echo 'Sublime Text 3 application found.'
 else
   echo 'Sublime Text 3 not installed. Please install it to /Applications folder first.'
-  echo 'Then run in terminal: curl -fsSL http://git.io/sublime3-bootstrap | sh'
+  echo 'Then run in terminal: curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh | sh'
   open 'http://www.sublimetext.com/3'
   exit 1
 fi
@@ -61,7 +61,7 @@ fi
 echo 'Add default packages and configs...'
 
 curl --silent --show-error --fail --location \
-  'https://github.com/nicck/sublime-bootstrap/tarball/master' | \
+  'https://github.com/fs/sublime-bootstrap/tarball/master' | \
   tar --strip 1 -zxvf - *-sublime-bootstrap-*/settings > /dev/null
 
 cp -f ./settings/* "$SUBLIME_DIR/Packages/User/"
