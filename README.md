@@ -18,3 +18,7 @@ Config includes:
 ```sh
 curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh | sh
 ```
+
+## Credits
+
+Maintained by Nickolay Abdrafikov
