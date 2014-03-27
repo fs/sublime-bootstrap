@@ -21,4 +21,8 @@ curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh |
 
 ## Credits
 
-Maintained by Nickolay Abdrafikov
+Sublime Bootstrap is maintained by [Nickolay Abdrafikov](http://github.com/nickolayabdrafikov).
+It was written by [Flatstack](http://www.flatstack.com) with the help of our
+[contributors](http://github.com/fs/sublime-bootstrap/contributors).
+
+[![Flatstack](http://www.flatstack.com/assets/images/logo.png)](http://www.flatstack.com)
