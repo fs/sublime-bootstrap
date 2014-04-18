@@ -32,10 +32,10 @@ else
 
   echo "Adding terminal command 'subl' into $CMD_PATH"
   ln -sf "$APP_DIR/Contents/SharedSupport/bin/subl" "$CMD_PATH/subl"
-fi
 
-if [[ :$PATH: != *:"$CMD_PATH":* ]] ; then
-  echo "\033[0;31m ! \033[0m $CMD_PATH NOT found in \$PATH"
+  if [[ :$PATH: != *:"$CMD_PATH":* ]] ; then
+    echo "\033[0;31m ! \033[0m $CMD_PATH NOT found in \$PATH"
+  fi
 fi
 
 # Install package control
