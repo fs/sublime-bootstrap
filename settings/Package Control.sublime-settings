@@ -3,7 +3,7 @@
 	"installed_packages":
 	[
 		"ChangeQuotes",
-		"CoffeeScript",
+		"Better CoffeeScript",
 		"Cucumber",
 		"Git",
 		"GitGutter",
