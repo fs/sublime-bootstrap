@@ -1,0 +1,12 @@
+os: osx
+osx_image: xcode7.3
+
+before_script:
+  - brew tap caskroom/cask
+  - brew cask install sublime-text
+
+script:
+  - bootstrap-osx.sh
+
+notifications:
+  email: false
