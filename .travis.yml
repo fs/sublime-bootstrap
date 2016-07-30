@@ -6,7 +6,7 @@ before_script:
   - brew cask install sublime-text
 
 script:
-  - bootstrap-osx.sh
+  - bin/install
 
 notifications:
   email: false
