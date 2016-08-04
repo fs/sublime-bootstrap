@@ -18,7 +18,7 @@ Config includes:
 2. Paste that at a Terminal prompt:
 
 ```sh
-curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bootstrap-osx.sh | sh
+curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bin/install | sh
 ```
 
 ## Credits
