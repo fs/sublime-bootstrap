@@ -2,22 +2,24 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"ChangeQuotes",
+		"A File Icon"
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ayu",
+		"Babel",
 		"Better CoffeeScript",
+		"ChangeQuotes",
 		"Cucumber",
 		"Git",
 		"GitGutter",
 		"Haml",
 		"LESS",
+		"Markdown Preview",
 		"Package Control",
 		"Quick File Move",
+		"RailsGoToSpec",
 		"Ruby Slim",
 		"Sass",
-		"Theme - Soda",
-		"AdvancedNewFile",
-		"All Autocomplete",
-		"Side​Bar​Enhancements",
-		"Babel",
-		"A File Icon"
+		"Side​Bar​Enhancements"
 	]
 }

@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
 	"drag_text": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -26,10 +26,11 @@
 		120
 	],
 	"show_full_path": true,
-	"soda_classic_tabs": false,
 	"tab_size": 2,
-	"theme": "Soda Light 3.sublime-theme",
+	"theme": "ayu-mirage.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"folder_exclude_patterns": [".git", ".hg", "tmp"]
+	"folder_exclude_patterns": [".git", ".hg", "tmp"],
+	"ui_separator": false,
+	"ui_font_size_small": true
 }
