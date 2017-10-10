@@ -4,7 +4,7 @@ Simple way to configure fresh installation of Sublime Text 3
 
 Config includes:
 
-- [Ayu Theme](https://packagecontrol.io/packages/ayu) with [Roboto Mono](https://www.google.com/fonts/specimen/Roboto+Mono) and [A File Icon](https://github.com/ihodev/a-file-icon) – nice theme, icons and font.
+- [Ayu Theme](https://packagecontrol.io/packages/ayu) and [A File Icon](https://github.com/ihodev/a-file-icon) – nice theme, and icons.
 - Packages for work with GIT, ES6, CoffeeScript, SASS, LESS, Slim and HAML
 - [ChangeQuotes](https://github.com/colinta/SublimeChangeQuotes) – quick changing quotes with `alt+shift+'`.
 - [AdvancedNewFile](https://packagecontrol.io/packages/AdvancedNewFile) – quick file creating with `opt+cmd+n`.
@@ -19,16 +19,19 @@ Config includes:
 ## Setup
 
 1. Get and Install [Sublime Text 3](http://www.sublimetext.com/3) into `/Applications` folder.
+2. Run install script
 
-2. Paste that at a Terminal prompt:
-
-```sh
+```
+brew install sublime-text
 curl -fsSL https://raw.github.com/fs/sublime-bootstrap/master/bin/install | sh
 ```
 
+3. Wait few seconds, make sure Packages installed, you will need to restart Sublime several times
+4. Download and install [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono?selection.family=Roboto+Mono) fonts.
+
 ## Credits
 
-Sublime Bootstrap is maintained by [Nickolay Abdrafikov](http://github.com/nickolayabdrafikov).
+Sublime Bootstrap is maintained by [Timur Vafin](http://github.com/timurvafin).
 It was written by [Flatstack](http://www.flatstack.com) with the help of our
 [contributors](http://github.com/fs/sublime-bootstrap/contributors).
 
