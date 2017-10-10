@@ -2,7 +2,7 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"A File Icon"
+		"A File Icon",
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"ayu",
@@ -20,6 +20,6 @@
 		"RailsGoToSpec",
 		"Ruby Slim",
 		"Sass",
-		"Side​Bar​Enhancements"
+		"SideBarEnhancements"
 	]
 }
